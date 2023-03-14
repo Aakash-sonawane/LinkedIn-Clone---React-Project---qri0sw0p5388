@@ -1,10 +1,18 @@
 import React from 'react'
 import '../styles/App.css';
+import Header from './Header';
+import SideBar from './SideBar';
 const App = () => {
 
 
   return (
-    <div id="main">
+    
+      <div className='app-wrapper'>
+      <Header/>
+      <div className='app__body'>
+        <SideBar/>
+      </div>
+    
     </div>
   )
 }
