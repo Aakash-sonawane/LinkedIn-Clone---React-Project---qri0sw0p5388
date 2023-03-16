@@ -1,8 +1,10 @@
+import { Widgets } from '@material-ui/icons';
 import React from 'react'
 import '../styles/App.css';
 import Feed from './Feed';
 import Header from './Header';
 import SideBar from './SideBar';
+import Widjet from "./Widjet"
 const App = () => {
 
 
@@ -13,7 +15,7 @@ const App = () => {
       <div className='app__body'>
         <SideBar/>
         <Feed/>
-
+        <Widjet/>
       </div>
 
       
