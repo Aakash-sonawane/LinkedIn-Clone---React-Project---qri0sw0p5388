@@ -10,19 +10,23 @@ import firebase from "firebase/compat/app"
 import 'firebase/compat/auth'
 import 'firebase/compat/firestore'
 import { db } from '../firebase';
+import { useSelector } from 'react-redux'
+import { selectUser } from '../features/userSlice';
 
 
 function Feed() {
+  const user=useSelector(selectUser);
+
   const[posts,setPost]=useState([]);
   const[input, setInput]=useState();
 
   const submitPost=(e)=>{
     e.preventDefault();
     db.collection("posts").add({
-      name:"aaksh",
+      name:user.displayName,
       description:"webdeveloper",
       message:input,
-      photoUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReFjO6rbNAKcZtfgpqkhnqWGPwcH5hAArN1A&usqp=CAU",
+      photoUrl:user.photoURL,
       timestamp:firebase.firestore.FieldValue.serverTimestamp(),
     })
     // console.log(input)
@@ -43,7 +47,7 @@ function Feed() {
     <div className='feed'>
         <div className='feed__input'>
             <div className='feed__form'>
-            <Avatar/>
+            <Avatar src={user.photoURL}/>
             <form onSubmit={submitPost}>
                 <input type={'text'} value={input} placeholder="start a post" onChange={e=>setInput(e.target.value)}/>
                 <input type={'submit'}/> 

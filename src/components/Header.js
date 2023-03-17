@@ -8,8 +8,13 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import "../styles/header.css"
 import HeaderOptions from './HeaderOptions';
 import { Avatar } from '@material-ui/core'
+import { selectUser } from '../features/userSlice';
+import { useSelector } from 'react-redux';
 
 function Header() {
+
+  const user=useSelector(selectUser);
+  console.log(user);
   return (
     <div className='header'>
          <div className='header__left'>
@@ -27,7 +32,7 @@ function Header() {
           <HeaderOptions Icon={MessageIcon} title={"Messages"}/>
           <HeaderOptions Icon={BusinessCenterIcon} title={"Jobs"}/>
           <HeaderOptions Icon={NotificationsIcon} title={"Notification"}/>
-          <HeaderOptions avatar={Avatar} title={"Aakash Sonawane"}/>
+          <HeaderOptions avatar={Avatar} title={user.displayName}/>
          </div>
     </div>
   )
