@@ -13,7 +13,7 @@ const firebaseConfig = {
 //   connects evthg
   const firebaseApp=firebase.initializeApp(firebaseConfig)
 
-// 
+// get
 const db=firebaseApp.firestore();
-
-export {db};
+const auth=firebase.auth();
+export {db,auth};
