@@ -12,6 +12,7 @@ import 'firebase/compat/firestore'
 import { db } from '../firebase';
 import { useSelector } from 'react-redux'
 import { selectUser } from '../features/userSlice';
+import FlipMove from 'react-flip-move';
 
 
 function Feed() {
@@ -42,7 +43,7 @@ function Feed() {
       // console.log(posts);
     })
   },[])
-  console.log(posts);
+  // console.log(posts);
   return (
     <div className='feed'>
         <div className='feed__input'>
@@ -74,12 +75,14 @@ function Feed() {
       </div>
 
       <div>
+      <FlipMove>
         {
           posts.map(({id,data:{name,description,message,photoUrl}})=>{
             return <Post key={id} name={name} description={description} message={message} photoUrl={photoUrl}/>
             // <Post name="Aakash sonawane" description="i am a web-developer" message="making lkvdhefee veee" photoUrl="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8&w=1000&q=80"/>
           })
         }
+        </FlipMove>
         {/* <Post name="Aakash sonawane" description="i am a web-developer" message="making lkvdhefee veee" photoUrl="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8&w=1000&q=80"/> */}
       </div>
     </div>

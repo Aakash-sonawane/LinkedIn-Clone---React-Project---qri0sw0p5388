@@ -41,6 +41,9 @@ margin-right: 10px;
     display: flex;
     align-items: center;
 }
+.header__right .logout_icon{
+    border-left: 1px solid #e8e6e6;
+}
 .header__options{
     display: flex;
     flex-direction: column;

@@ -7,14 +7,16 @@ import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import "../styles/header.css"
 import HeaderOptions from './HeaderOptions';
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import { Avatar } from '@material-ui/core'
 import { selectUser } from '../features/userSlice';
 import { useSelector } from 'react-redux';
+import firebase from 'firebase/compat'
 
 function Header() {
 
   const user=useSelector(selectUser);
-  console.log(user);
+  // console.log(user);
   return (
     <div className='header'>
          <div className='header__left'>
@@ -33,6 +35,9 @@ function Header() {
           <HeaderOptions Icon={BusinessCenterIcon} title={"Jobs"}/>
           <HeaderOptions Icon={NotificationsIcon} title={"Notification"}/>
           <HeaderOptions avatar={Avatar} title={user.displayName}/>
+          <div className='logout_icon'>
+          <HeaderOptions Icon={ExitToAppIcon} title={"LOGOUT"} onClick={e=>firebase.auth().signOut()}/>
+          </div>
          </div>
     </div>
   )

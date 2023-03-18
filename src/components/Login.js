@@ -86,7 +86,7 @@ function Login() {
       </form> ) : (<form onSubmit={signIn}>
         <input type={'email'} placeholder='Email' value={email} onChange={e=>setEmail(e.target.value)}/>
         <input type={'password'} placeholder='Password' value={password} onChange={e=>setPassword(e.target.value)}/>
-        <input type='submit' value={'sign up'} />
+        <input type='submit' value={'Sign In'} />
       <h4>Not a member ? <span onClick={()=>{
         setSingnUp(true);
       }}>Register Here</span></h4>
