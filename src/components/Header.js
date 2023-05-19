@@ -13,9 +13,10 @@ import { selectUser } from '../features/userSlice';
 import { useSelector } from 'react-redux';
 import firebase from 'firebase/compat'
 
-function Header() {
+function Header({pagetoShow,setPagetoShow}) {
 
   const user=useSelector(selectUser);
+  
   // console.log(user);
   return (
     <div className='header'>
@@ -29,11 +30,13 @@ function Header() {
             </div>
          </div>
          <div className='header__right'>
-          <HeaderOptions Icon={HomeIcon} title={"Home"}/>
-          <HeaderOptions Icon={PeopleIcon} title={"My Networks"}/>
-          <HeaderOptions Icon={MessageIcon} title={"Messages"}/>
-          <HeaderOptions Icon={BusinessCenterIcon} title={"Jobs"}/>
-          <HeaderOptions Icon={NotificationsIcon} title={"Notification"}/>
+          {/* <div className='opt'>
+          </div> */}
+          <HeaderOptions  Icon={HomeIcon} title={"Home"} onClick={()=>{setPagetoShow("home")}}/>
+          <HeaderOptions  Icon={PeopleIcon} title={"My Networks"} onClick={()=>{setPagetoShow("network")}}/>
+          {/* <HeaderOptions Icon={MessageIcon} title={"Messages"} onClick={()=>{setPagetoShow("message")}}/> */}
+          <HeaderOptions Icon={BusinessCenterIcon} title={"Jobs"} onClick={()=>{setPagetoShow("job")}}/>
+          <HeaderOptions Icon={NotificationsIcon} title={"Notification"} onClick={()=>{setPagetoShow("notification")}}/>
           <HeaderOptions avatar={Avatar} title={user.displayName}/>
           <div className='logout_icon'>
           <HeaderOptions Icon={ExitToAppIcon} title={"LOGOUT"} onClick={e=>firebase.auth().signOut()}/>

@@ -1,0 +1,54 @@
+.feed-myNetwork{
+    gap:20px;
+}
+.hash{
+    font-size: 15px;
+}
+.notification_sidebar h6{
+    margin: 18px;
+
+}
+.noti_feed{
+    display: flex;
+    gap: 10px;
+}
+.noti_feed img{
+    width: 50px;
+    height: 50px;
+}
+.noti_feed p{
+    margin: 0px;
+}
+
+.profile{
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.profile button{
+    /* background-color: rgb(46, 97, 216); */
+    
+    color: rgb(62, 66, 200);
+    border: 1px solid black;
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.profile img{
+    width: 150px;
+    height: 60px;
+}
+
+.network_connection{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}

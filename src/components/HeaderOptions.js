@@ -12,10 +12,10 @@ function HeaderOptions({Icon, title, avatar,onClick}) {
 
   const user=useSelector(selectUser);
   return (
-    <div className='header__options'>
+    <div className='header__options ' >
         {Icon && <Icon onClick={onClick}></Icon>}
         {avatar && <Avatar name={avatar} src={user.photoURL}/>}
-        <span>{title}</span>
+        <span >{title}</span>
     </div>
   )
 }

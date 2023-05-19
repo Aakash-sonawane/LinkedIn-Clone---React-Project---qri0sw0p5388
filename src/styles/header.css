@@ -57,7 +57,7 @@ margin-right: 10px;
 .header__options:first-child{
     color: black;
 }
-.header__options:first-child::before{
+/* .header__options:nth-child(2)::before{
     content: "";
     position: absolute;
     left: -10px;
@@ -65,6 +65,13 @@ margin-right: 10px;
     background-color: #333;
     height: 2px;
     bottom: -7px;
+} */
+/* .opt{
+    width:30px
+} */
+.opt{
+    border-bottom: 2px solid black;
+    width: 38px;
 }
 .header__options .MuiAvatar-root  {
     width: 30px;
