@@ -2,9 +2,11 @@ import React from 'react'
 import SearchIcon from '@mui/icons-material/Search';
 import HomeIcon from '@mui/icons-material/Home';
 import PeopleIcon from '@mui/icons-material/People';
-import MessageIcon from '@mui/icons-material/Message';
+// import MessageIcon from '@mui/icons-material/Message';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import NotificationsIcon from '@mui/icons-material/Notifications';
+45
++96
 import "../styles/header.css"
 import HeaderOptions from './HeaderOptions';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';

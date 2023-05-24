@@ -55,12 +55,12 @@ function JobSection() {
           <h3>Recent job Searches</h3>
           <div>
             <div>
-              reactjs <i>14 new</i>
+              reactjs <i style={{"color":"blue"}}>28 new</i>
               <p>pune,Maharashtra, India Entry leveel</p>
             </div>
             <hr/>
             <div>
-              reactjs <i>14 new</i>
+              Frontend <i style={{"color":"blue"}}>56 new</i>
               <p>pune,Maharashtra, India Entry leveel</p>
             </div>
           </div>
@@ -71,7 +71,7 @@ function JobSection() {
       <div className='feed__input'>
       <h3>Recommended for you</h3>
       <p>Base on your profile</p>
-      <div>
+      <div className='job_box'>
         <h4>React.js developer</h4>
         <p>React developers</p>
         <p>india</p>

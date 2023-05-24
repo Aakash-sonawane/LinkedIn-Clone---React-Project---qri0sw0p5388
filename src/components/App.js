@@ -9,7 +9,7 @@ import React, { useEffect } from 'react'
 // import { useDispatch, useSelector } from 'react-redux';
 // import { loginuser, logoutuser, selectUser } from '../features/userSlice';
 // import { auth } from '../firebase';
-import Root from './routers/root';
+import Root from './conditionals/root';
 
 const App = () => {
   return(

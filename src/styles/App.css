@@ -52,3 +52,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
+
+.job_box{
+    padding: 12px;
+    background-color: rgb(231, 244, 244);
+}
